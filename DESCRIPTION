@@ -11,8 +11,6 @@ Description: Implementation of several distributions recently proposed and
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
-Depends: 
-    R (>= 3.5.1)
-Imports:
-    flexsurv (>= 1.1.0)
+Depends: R (>= 3.5.1), flexsurv (>= 1.1.0)
+Imports: flexsurv (>= 1.1.0)
 RoxygenNote: 6.1.0
