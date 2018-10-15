@@ -1,0 +1,17 @@
+Package: survdistr
+Type: Package
+Title: Survival Analysis Distributions
+Version: 0.0.0.9000
+Authors@R: person("Hadley", "Wickham", email = "hadley@rstudio.com",
+  role = c("aut", "cre"))
+Maintainer: Anderson Cristiano Neisse <a.neisse@gmail.com>
+Description: Implementation of several distributions recently proposed and
+    most commonly used in Survival Analysis. The functions comprise density, 
+    random number generation, cumulative probability, survival and hazard functions.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Imports:
+    flexsurv,
+    maxLik
+RoxygenNote: 6.1.0
