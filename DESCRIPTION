@@ -2,7 +2,7 @@ Package: survdistr
 Type: Package
 Title: Survival Analysis Distributions
 Version: 0.0.0.9000
-Authors@R: person("Hadley", "Wickham", email = "hadley@rstudio.com",
+Authors@R: person("Anderson", "Neisse", email = "a.neisse@gmail.com",
   role = c("aut", "cre"))
 Maintainer: Anderson Cristiano Neisse <a.neisse@gmail.com>
 Description: Implementation of several distributions recently proposed and
