@@ -87,10 +87,10 @@ Ortega \emph{et al} (2011).
 }
 \examples{
 # Generating values and comparing with the function
-x <- rkumll(10000, alpha = 0.5, gamma = 2, lambda = 2, phi = 2)
+x <- rkumgg(10000, tau = 0.9, alpha = 2, k = 0.5, lambda = 3, phi = 10)
 hist(x, probability = T, breaks = 100)
-curve(dkumll(x, alpha = 0.5, gamma = 2, lambda = 2, phi = 2),
-      from = 0, to = 25, add = T)
+curve(dkumgg(x, tau = 0.9, alpha = 2, k = 0.5, lambda = 3, phi = 10),
+      from = 0, to = 3, add = T)
 
 }
 \references{
