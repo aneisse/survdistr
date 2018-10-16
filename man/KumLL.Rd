@@ -7,6 +7,7 @@
 \alias{qkumll}
 \alias{hkumll}
 \alias{rkumll}
+\alias{mlkumll}
 \title{Kumarasuammy Log-Logistic Distribution}
 \source{
 The source code of all distributions in this package can also be
@@ -22,6 +23,8 @@ qkumll(p, alpha, gamma, lambda, phi, lower.tail = TRUE, log.p = FALSE)
 hkumll(q, alpha, gamma, lambda, phi)
 
 rkumll(n, alpha, gamma, lambda, phi, cens.prop = 0)
+
+mlkumll(x, a.ini, g.ini, l.ini, p.ini)
 }
 \arguments{
 \item{x, q}{numeric vector of quantiles.}
