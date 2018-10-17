@@ -155,26 +155,26 @@ mlkumll <- function(x, a.ini, g.ini, l.ini, p.ini){
 
   # Likelihood Function KumLL
   lkumll<-function(param, x){
-    if(any(c(param[1]<0,param[2]<0,param[3]<0,param[4]<0))){
-      vero<-NA
+    if(any(param < 0)){
+      vero <- NA
     }
     else{
-      a<-param[1]
-      g<-param[2]
-      l<-param[3]
-      p<-param[4]
+      a <- param[1]
+      g <- param[2]
+      l <- param[3]
+      p <- param[4]
 
       if(any(param < 1e-20)) return(.Machine$double.xmax^.5)
 
       f <- dkumll(x, a, g, l, p)
 
       loglike <- sum(-log(f))
+      return(loglike)
     }
-    return(loglike)
   }
 
   # Estimating parameters
-  ini.val <- c(a = 1.5, g = 5.5, l = 1.8, p = 1.1)
+  ini.val <- c(a = a.ini, g = g.ini, l = l.ini, p = p.ini)
   estim <- optim(fn = lkumll, par = ini.val, x = x, hessian = T)
   return(estim)
 }

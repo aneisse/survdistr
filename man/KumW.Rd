@@ -7,6 +7,7 @@
 \alias{qkumw}
 \alias{hkumw}
 \alias{rkumw}
+\alias{mlkumw}
 \title{Kumarasuammy Weibull Distribution}
 \source{
 The source code of all distributions in this package can also be
@@ -22,6 +23,8 @@ qkumw(p, beta, c, lambda, phi, lower.tail = TRUE, log.p = FALSE)
 hkumw(q, beta, c, lambda, phi)
 
 rkumw(n, beta, c, lambda, phi, cens.prop = 0)
+
+mlkumw(x, b.ini, c.ini, l.ini, p.ini)
 }
 \arguments{
 \item{x, q}{numeric vector of quantiles.}

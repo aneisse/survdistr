@@ -149,3 +149,34 @@ rkumw<-function(n, beta, c, lambda, phi, cens.prop=0)
   }
   ret
 }
+
+# Maximum Likelihood Parameter estimation KumW
+#' @rdname KumW
+mlkumw <- function(x, b.ini, c.ini, l.ini, p.ini){
+
+  # Likelihood Function KumLL
+  lkumw<-function(param, x){
+    if(any(param < 0)){
+      vero <- NA
+    }
+    else{
+      b <- param[1]
+      c <- param[2]
+      l <- param[3]
+      p <- param[4]
+
+      if(any(param < 1e-20)) return(.Machine$double.xmax^.5)
+
+      f <- dkumw(x, b, c, l, p)
+
+      loglike <- sum(-log(f))
+      return(loglike)
+    }
+  }
+
+  # Estimating parameters
+  ini.val <- c(a = b.ini, b = g.ini, l = l.ini, p = p.ini)
+  estim <- optim(fn = lkumw, par = ini.val, x = x, hessian = T)
+  return(estim)
+}
+
